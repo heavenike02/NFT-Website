@@ -1,0 +1,480 @@
+body {
+  background: linear-gradient(113.49deg, #984d38 -30.3%, #181e41 58.12%)
+    no-repeat;
+  font-family: "Space Mono", "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  padding-bottom: 10px;
+}
+h1 {
+  color: #ffffff;
+  font-size: 60px;
+}
+h2 {
+  color: #ffffff;
+  font-size: 30px;
+  position: relative;
+}
+
+.mainimage {
+  width: 100%;
+  position: relative;
+  left: 15%;
+  top: 10%;
+}
+
+.left {
+  float: left;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+/* Code for main sections in mobile view */
+.main {
+  grid-area: main;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+.about {
+  grid-area: about;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  left: 5%;
+  width: 90%;
+
+}
+
+.nav {
+  color: transparent;
+  grid-area: nav;
+}
+
+.leftCol {
+  padding: 10px;
+  grid-area: left;
+  width: 80%;
+}
+
+.rightCol {
+  grid-area: right;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  left: -20%;
+  width :120%;
+
+}
+
+
+.profile {
+  position: relative;
+  top: 00%;
+}
+.Mainbutton {
+  background: transparent;
+  margin: 50px 50px 100px 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 0 0 9px #eeeeee;
+  border-radius: 35px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  grid-area: foot;
+  padding: 10px;
+}
+
+/* Code for navigation */
+.nav a {
+  padding: 10px;
+  color: transparent;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav a:hover {
+  box-shadow: 0 0 9px #eeeeee;
+  color: white;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav li {
+  flex: 1 1 50%;
+}
+.logonav {
+  width: auto;
+  height: 45px;
+}
+
+.logo {
+  position: relative;
+  top: -22px;
+  height: 70px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.maindescription {
+  color: #ffffff;
+  font-size: 35px;
+}
+
+
+/* Card */
+.sub-card {
+  background: rgba(255, 255, 255, 0.1);
+  width: min(95%, 24rem);
+  margin: 3rem auto;
+  border-radius: 20px;
+  padding: 1rem 1rem 1rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: -5%;
+}
+.main-card {
+    background: rgba(255, 255, 255, 0.1);
+  width: min(50%, 24rem);
+  margin: 3rem auto;
+  border-radius: 20px;
+  padding: 1.5rem 1.6rem 2rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 0%;
+}
+
+/* Main Image */
+.image-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.main-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+
+.image-container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.image-container:hover .overlay + .view {
+  display: block;
+}
+
+/* Code for formating social media links */
+.icon a {
+  color: white;
+  font-size: 30px;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* media query for larger screen sizes */
+@media screen and (min-width: 70ch) {
+  .container {
+    display: grid;
+    grid-template-columns: 10vw 1fr 1fr 10vw;
+    grid-template-areas:
+      "nav nav nav nav"
+      ". left right ."
+      "main main main main "
+      "about about about about"
+      "foot foot foot foot";
+  }
+  .rightCol {
+    grid-area: right;
+    padding: 10px;
+    display: block;
+  }
+
+  .header {
+    height: 40vh;
+  }
+
+  .nav ul {
+    display: flex;
+  }
+
+  .nav li {
+    flex: 1;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      ". left right ."
+      "main main main main"
+      "about about about about"
+      "foot foot foot foot";
+  }
+    .profile {
+  position: relative;
+  top: 2%;
+}
+}
+
+
+/* make the cards landscape*/
+@media screen and (min-width: 1100px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      ". left right ."
+      "main main main main"
+      "about about about about"
+      "foot foot foot foot";
+  }
+
+  .cards {
+    display: flex;
+
+
+  }
+  .about {
+  grid-area: about;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  position: relative;
+  left: 10%;
+  width: 80%;
+
+}
+  .main-card {
+    background: rgba(255, 255, 255, 0.1);
+    width: min(80%, 22rem);
+    margin: 2rem auto;
+    border-radius: 15px;
+    padding: 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  }
+
+  .mainimage {
+    width: 100%;
+    position: relative;
+    left: 15%;
+    top: -5%;
+  }
+}
+
+/* FORM CSS  */
+.form-container {
+  max-width: 60%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.form-container input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+}
+.form-container input[type="submit"] {
+  background-color: #1b31b0;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  box-shadow: 2px #eeeeee;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.form-container textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+#thank_you {
+  max-width: 50%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.contact-body {
+  min-height: 100vh;
+}
+/* MOBILE RESPONSIVE  */
+@media (max-width: 900px) {
+  .maintitle {
+    font-size: 40px;
+  }
+  .maindescription {
+    font-size: 26px;
+  }
+  .mainlist {
+    margin-top: 25px;
+  }
+  .main
+  {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+
+  .Mainbutton {
+    margin-bottom: 0px;
+  }
+  .mainlist li {
+    font-size: 1rem;
+  }
+  .sublist {
+    font-size: 1rem;
+  }
+  .sublist img {
+    width: 50%;
+    height: auto;
+  }
+  .main p {
+    text-align: justify;
+  }
+  .nav {
+    flex-wrap: nowrap;
+  }
+  .nav li {
+    flex: auto;
+    font-size: 0.8rem;
+  }
+
+  .mainimage {
+    width: auto;
+
+    position: relative;
+    left: 0%;
+    top: 5%;
+  }
+}
+
+/* MEDIUM DEVICES  */
+@media (max-width: 1000px) {
+  .maintitle {
+    font-size: 36px;
+  }
+  .maindescription{
+
+    font-size: 1.7rem;
+  }
+  .footer h2 {
+    font-size: 20px;
+  }
+  .container,
+  .main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+
+  .form-container {
+    max-width: 90%;
+  }
+  #thank_you {
+    max-width: 90%;
+  }
+}
+/* SMALL DEVICES  */
+
+@media (max-width: 559px) {
+  .nav li {
+    font-size: 0.5rem;
+  }
+  .rightCol{
+
+    font-size: 0.5rem;
+    width:90%;
+      position: relative;
+      left: 0%;
+  }
+  .maindescription{
+
+    font-size: 1rem;
+
+  }
+
+  .sub-card {
+  background: rgba(255, 255, 255, 0.1);
+  width: min(95%, 24rem);
+
+  border-radius: 20px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 15%;
+
+  }
+
+
+
+}
